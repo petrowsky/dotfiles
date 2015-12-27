@@ -56,6 +56,7 @@ brew install git
 brew install highlight
 brew install hub
 brew install markdown
+brew install the_silver_searcher
 brew install tidy-html5
 brew install tmux
 brew install z
