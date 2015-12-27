@@ -7,7 +7,6 @@ if filereadable(expand("~/.vimrc.before"))
 	source ~/.vimrc.before
 endif
 
-" SECTION NAVIGATION - Use * to jump to section
 "------------------------------------------------------------------------------
 " GENERALSTUFF
 " INSERTMODE
@@ -73,9 +72,15 @@ set nojoinspaces
 
 " DISPLAYSTUFF
 "------------------------------------------------------------------------------
+let base16colorspace=256
+set background=dark
+colorscheme base16-bright
+
 " Display of width and line numbering
 set textwidth=80
 set colorcolumn=+1
+hi ColorColumn ctermbg=234 guibg=#2E3234
+
 set number numberwidth=5
 "set relativenumber
 set scrolloff=3    " Because seeing more context is a nice thing.

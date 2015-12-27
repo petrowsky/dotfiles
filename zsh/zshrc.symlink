@@ -88,3 +88,6 @@ alias ohmyzsh="subl ~/.oh-my-zsh"
 # Adding zsh multi move support
 autoload -U zmv
 alias mmv='noglob zmv -W'
+
+BASE16_SHELL="$HOME/.dotfiles/repos/base16-shell/base16-bright.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
