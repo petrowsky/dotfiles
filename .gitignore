@@ -1,0 +1,5 @@
+# Don't store vim plugins in the repo
+vim/vim.symlink/plugins
+
+# Vim plugin manager is installed via /vim/install.sh
+vim/vim.symlink/autoload/plug.vim
