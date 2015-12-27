@@ -48,7 +48,6 @@ set history=1000
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
-set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 set autoread      " Detect when files are modified
 
@@ -79,6 +78,17 @@ set colorcolumn=+1
 set number numberwidth=5
 "set relativenumber
 set scrolloff=3    " Because seeing more context is a nice thing.
+
+" If Airline is installed then this will be overwritten by plugin settings
+if has('statusline')
+    set laststatus=2
+    set statusline=%<%f\                     " Filename
+    set statusline+=%w%h%m%r                 " Options
+    set statusline+=%{fugitive#statusline()} " Git Hotness
+    set statusline+=\ [%{&ff}/%Y]            " Filetype
+    set statusline+=\ [%{getcwd()}]          " Current dir
+    set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+endif
 
 " TABSTUFF
 "------------------------------------------------------------------------------
@@ -160,6 +170,21 @@ map <C-p> :CtrlP<CR>
 " ---< NerdTree >---
 map <C-t> :NERDTreeToggle<CR>
 
+
+" ---< Airline >---
+if has('macunix')
+    if !exists('g:airline_symbols')
+        let g:airline_symbols = {}
+    endif
+    let g:airline_powerline_fonts=1
+    let g:airline_left_sep = ''
+    let g:airline_left_alt_sep = ''
+    let g:airline_right_sep = ''
+    let g:airline_right_alt_sep = ''
+    let g:airline_symbols.branch = ''
+    let g:airline_symbols.readonly = ''
+    let g:airline_symbols.linenr = ''
+endif
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
