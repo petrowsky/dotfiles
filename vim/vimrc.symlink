@@ -1,4 +1,4 @@
-" Inspiration
+
 " https://github.com/thoughtbot/dotfiles/blob/master/vimrc
 " https://github.com/nicknisi/dotfiles/blob/master/vim/vimrc.symlink
 
@@ -182,6 +182,7 @@ map <C-t> :NERDTreeToggle<CR>
 
 
 " ---< Airline >---
+" Make sure to use a patched font https://github.com/ryanoasis/nerd-fonts
 if has('macunix')
     if !exists('g:airline_symbols')
         let g:airline_symbols = {}
