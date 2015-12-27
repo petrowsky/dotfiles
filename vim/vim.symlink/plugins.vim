@@ -9,5 +9,14 @@ Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons'
 
+" Git
+Plug 'tpope/vim-fugitive'
+
+" Dev stuff
+Plug 'scrooloose/syntastic'
+
+" UI Stuff
+Plug 'bling/vim-airline'
+
 call plug#end()
 filetype plugin indent on
