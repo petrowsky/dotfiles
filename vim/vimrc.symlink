@@ -112,6 +112,17 @@ set completeopt+=longest
 " Display whitespace stuff
 set list listchars=tab:»·,trail:·,nbsp:·,eol:¬
 
+" Tab navigation/manipulation. Just like h,j,k,l - but with 't'
+nnoremap th  :tabfirst<CR>
+nnoremap tj  :tabprev<CR>
+nnoremap tk  :tabnext<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tt  :tabedit<Space>
+nnoremap tn  :tabnew<CR>
+nnoremap tm  :tabm<Space>
+nnoremap tx  :tabclose<CR>
+
+
 " WINDOWSTUFF
 "------------------------------------------------------------------------------
 
