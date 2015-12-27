@@ -15,6 +15,7 @@ Plug 'airblade/vim-gitgutter'
 
 " Dev stuff
 Plug 'scrooloose/syntastic'
+Plug 'rizzatti/dash.vim'
 
 " UI Stuff
 Plug 'bling/vim-airline'
