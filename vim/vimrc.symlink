@@ -90,6 +90,9 @@ if has('statusline')
     set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 endif
 
+" Always use vertical diffs
+set diffopt+=vertical
+
 " TABSTUFF
 "------------------------------------------------------------------------------
 set noexpandtab    " insert tabs rather than spaces for <Tab>
