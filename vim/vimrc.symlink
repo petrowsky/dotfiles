@@ -1,0 +1,141 @@
+" Inspiration
+" https://github.com/thoughtbot/dotfiles/blob/master/vimrc
+" https://github.com/nicknisi/dotfiles/blob/master/vim/vimrc.symlink
+
+" SECTION NAVIGATION - Use * to jump to section
+"------------------------------------------------------------------------------
+" INSERTMODE
+" DISPLAYSTUFF
+" TABSTUFF
+" WINDOWSTUFF
+" SPELLINGSTUFF
+" SEARCHINGSTUFF
+" FILESTUFF
+
+set nocompatible      " Because vim is better.
+set hidden            " Don't kill my buffers.
+
+" Leader key
+let mapleader = " "
+
+" Because editing ~/.vimrc happens a lot.
+map <leader>conf :e! ~/.vimrc<cr>
+
+" Using the OS clipboard is nice
+set clipboard=unnamed
+
+
+" INSERTMODE
+"------------------------------------------------------------------------------
+" Esc key is too far. Let's make it easy.
+" For when I'm not using an emulator with key mapping
+inoremap <C-J> <Esc>
+
+" When using iTerm2, map global key of ctrl-return to ❤
+" Heart char is U+2764. When sending a heart, it will escape you!
+inoremap ❤ <Esc>
+" You ARE remapping the Caps Lock key to Control right?
+
+" Because it's always good to save - easily.
+inoremap <C-s> <Esc>:w<CR>
+nnoremap <C-s> <Esc>:w<CR>
+
+set backspace=2   " Backspace deletes like most programs in insert mode
+set nobackup
+set nowritebackup
+set noswapfile
+set history=1000
+set ruler         " show the cursor position all the time
+set showcmd       " display incomplete commands
+set incsearch     " do incremental searching
+set laststatus=2  " Always display the status line
+set autowrite     " Automatically :write before running commands
+set autoread      " 
+
+" Use one space, not two, after punctuation.
+set nojoinspaces
+
+" DISPLAYSTUFF
+"------------------------------------------------------------------------------
+" Display of width and line numbering
+set textwidth=80
+set colorcolumn=+1
+set number numberwidth=5
+"set relativenumber
+set scrolloff=3    " Because seeing more context is a nice thing.
+
+" TABSTUFF
+"------------------------------------------------------------------------------
+set noexpandtab    " insert tabs rather than spaces for <Tab>
+set smarttab       " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
+set tabstop=4      " the visible width of tabs
+set softtabstop=4  " edit as if the tabs are 4 characters wide
+set shiftwidth=4   " number of spaces to use for indent and unindent
+set shiftround     " round indent to a multiple of 'shiftwidth'
+set completeopt+=longest
+
+" Display whitespace stuff
+set list listchars=tab:»·,trail:·,nbsp:·,eol:¬
+
+" WINDOWSTUFF
+"------------------------------------------------------------------------------
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+" Switch between the last two files
+nnoremap <leader><leader> <c-^>
+
+" SPELLINGSTUFF
+"------------------------------------------------------------------------------
+" Spelling file can be symlinked
+set spellfile=$HOME/.vim-spell-en.utf-8.add
+
+" Autocomplete with dictionary words when spell check is on
+set complete+=kspell
+
+
+" SEARCHINGSTUFF
+"------------------------------------------------------------------------------
+set ignorecase     " case insensitive searching
+set smartcase      " case-sensitive if expresson contains a capital letter
+set hlsearch       " highlight search matches
+set incsearch      " set incremental search, like modern browsers
+set nolazyredraw   " don't redraw while executing macros
+set magic          " Set magic on, for regex
+set showmatch      " show matching braces
+set mat=2          " how many tenths of a second to blink
+
+"FILESTUFF
+"------------------------------------------------------------------------------
+filetype indent plugin on
+
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
+  syntax on
+endif
+
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+
+" Local config
+if filereadable($HOME . "/.vimrc.local")
+  source ~/.vimrc.local
+endif
