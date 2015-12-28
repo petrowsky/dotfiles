@@ -115,6 +115,12 @@ endif
 " Always use vertical diffs
 set diffopt+=vertical
 
+" GUI settings
+if has('gui_running')
+    set guioptions-=T           " Remove the toolbar
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16,Menlo\ Regular:h14,Consolas\ Regular:h14,Courier\ New\ Regular:h14
+endif
+
 " TABSTUFF
 "------------------------------------------------------------------------------
 set autoindent     " because code should be indented
