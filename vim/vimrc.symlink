@@ -64,8 +64,8 @@ inoremap ❤ <Esc>
 " You ARE remapping the Caps Lock key to Control right?
 
 " Because it's always good to save - easily.
-inoremap <C-s> <Esc>:w<CR>
-nnoremap <C-s> :w<CR>
+inoremap <C-s> <C-o>:update<CR>
+noremap <C-s> :update<CR>
 
 " Use one space, not two, after punctuation.
 set nojoinspaces
