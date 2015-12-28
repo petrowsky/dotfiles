@@ -32,7 +32,8 @@ set hidden            " Don't kill my buffers.
 let mapleader = " "
 
 " Because editing ~/.vimrc happens a lot.
-map <leader>conf :e! ~/.vimrc<cr>
+map <leader>conf :e! $MYVIMRC<cr>
+nmap <leader>src :source $MYVIMRC<cr>
 
 " Using the OS clipboard is nice
 set clipboard=unnamed
@@ -56,6 +57,11 @@ if !empty(&viminfo)
       set viminfo^=!
   endif
 set sessionoptions-=options
+
+" Load matchit.vim, but only if the user hasn't installed a newer version.
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+  runtime! macros/matchit.vim
+endif
 
 " INSERTMODE
 "------------------------------------------------------------------------------
