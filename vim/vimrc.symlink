@@ -52,6 +52,7 @@ set incsearch     " do incremental searching
 set autowrite     " Automatically :write before running commands
 set autoread      " Detect when files are modified
 set wildmenu      " Enhanced completion is nicer
+set wildmode=list:longest,full
 
 if !empty(&viminfo)
       set viminfo^=!
@@ -97,6 +98,8 @@ set nowrap
 set number numberwidth=5
 "set relativenumber
 set scrolloff=3    " Because seeing more context is a nice thing.
+set ttyfast
+set visualbell
 
 " If Airline is installed then this will be overwritten by plugin settings
 if has('statusline')
