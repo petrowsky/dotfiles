@@ -16,6 +16,8 @@ Plug 'airblade/vim-gitgutter'
 " Dev stuff
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-unimpaired'
 Plug 'rizzatti/dash.vim'
 
 " UI Stuff
