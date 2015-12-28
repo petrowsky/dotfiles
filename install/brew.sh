@@ -33,7 +33,7 @@ brew install pstree
 brew install pandoc
 brew install par
 brew install rename
-brew install vim --override-system-vi
+brew install vim --with-lua --override-system-vi
 brew install python3
 brew install s3cmd
 brew install duplicity
