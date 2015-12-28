@@ -124,7 +124,7 @@ nnoremap tm  :tabm<Space>
 nnoremap tx  :tabclose<CR>
 
 
-" WINDOWSTUFF
+" WINDOWSTUFF (navigation)
 "------------------------------------------------------------------------------
 
 " Open new split panes to right and bottom, which feels more natural
@@ -139,6 +139,9 @@ nnoremap <C-l> <C-w>l
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
+
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
 
 " SPELLINGSTUFF
 "------------------------------------------------------------------------------
@@ -196,7 +199,6 @@ map <C-p> :CtrlP<CR>
 
 " ---< NerdTree >---
 map <C-t> :NERDTreeToggle<CR>
-
 
 " ---< Airline >---
 " Make sure to use a patched font https://github.com/ryanoasis/nerd-fonts
