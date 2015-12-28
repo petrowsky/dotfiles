@@ -85,6 +85,10 @@ set nojoinspaces
 
 " DISPLAYSTUFF
 "------------------------------------------------------------------------------
+if &term == 'xterm' || &term == 'screen'
+    set t_Co=256
+endif
+
 let base16colorspace=256
 set background=dark
 colorscheme base16-bright
