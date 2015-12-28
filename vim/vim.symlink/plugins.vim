@@ -8,6 +8,7 @@ Plug 'chriskempson/base16-vim'
 " File navigation
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons'
+Plug 'tpope/vim-vinegar'
 
 " Git
 Plug 'tpope/vim-fugitive'
