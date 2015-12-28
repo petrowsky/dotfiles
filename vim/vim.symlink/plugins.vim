@@ -22,6 +22,8 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-repeat'
+Plug 'godlygeek/tabular'
+Plug 'sickill/vim-pasta'
 Plug 'rizzatti/dash.vim'
 
 " UI Stuff
