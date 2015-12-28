@@ -28,7 +28,7 @@ Plug 'rizzatti/dash.vim'
 
 " UI Stuff
 Plug 'bling/vim-airline'
-Plug 'vim-indent-guides'
+Plug 'nathanaelkane/vim-indent-guides'
 
 call plug#end()
 filetype plugin indent on
