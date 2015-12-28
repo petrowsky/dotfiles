@@ -4,7 +4,7 @@
 
 " Customization before loading
 if filereadable(expand("~/.vimrc.before"))
-	source ~/.vimrc.before
+    source ~/.vimrc.before
 endif
 
 "------------------------------------------------------------------------------
@@ -22,7 +22,7 @@ endif
 
 " Load plugins
 if filereadable(expand("~/.vim/plugins.vim"))
-	source ~/.vim/plugins.vim
+    source ~/.vim/plugins.vim
 endif
 
 set nocompatible      " Because vim is better.
@@ -65,7 +65,7 @@ inoremap ❤ <Esc>
 
 " Because it's always good to save - easily.
 inoremap <C-s> <Esc>:w<CR>
-nnoremap <C-s> <Esc>:w<CR>
+nnoremap <C-s> :w<CR>
 
 " Use one space, not two, after punctuation.
 set nojoinspaces
@@ -80,6 +80,7 @@ colorscheme base16-bright
 set textwidth=80
 set colorcolumn=+1
 hi ColorColumn ctermbg=234 guibg=#2E3234
+set nowrap
 
 set number numberwidth=5
 "set relativenumber
@@ -101,7 +102,7 @@ set diffopt+=vertical
 
 " TABSTUFF
 "------------------------------------------------------------------------------
-set noexpandtab    " insert tabs rather than spaces for <Tab>
+set expandtab      " insert spaces instead of <Tab>
 set smarttab       " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
 set tabstop=4      " the visible width of tabs
 set softtabstop=4  " edit as if the tabs are 4 characters wide
