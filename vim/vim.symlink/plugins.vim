@@ -34,5 +34,8 @@ Plug 'nathanaelkane/vim-indent-guides'
 " Debug Stuff
 Plug 'joonty/vdebug'
 
+" Languages
+Plug 'vim-scripts/nginx.vim'
+
 call plug#end()
 filetype plugin indent on
