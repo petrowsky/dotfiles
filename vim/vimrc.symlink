@@ -55,8 +55,8 @@ set wildmenu      " Enhanced completion is nicer
 set wildmode=list:longest,full
 
 if !empty(&viminfo)
-      set viminfo^=!
-  endif
+    set viminfo^=!
+endif
 set sessionoptions-=options
 
 " Load matchit.vim, but only if the user hasn't installed a newer version.
@@ -217,6 +217,32 @@ endif
 
 " Like a faster update time for plugins like GitGutter
 set updatetime=250
+
+" Vdebug
+let g:vdebug_options={"port" : 9001}
+
+" Mapping key familiar to debugging in other apps
+"<F1> is help
+"<F2> is reserved (code cursor for videos)
+"<F3> is reserved (os zooming for videos)
+let g:vdebug_keymap = {
+    \ "run_to_cursor" : "<F4>",
+    \ "step_over" : "<F5>",
+    \ "step_into" : "<F6>",
+    \ "step_out" : "<F7>",
+    \ "run" : "<F8>",
+    \ "close" : "<F9>",
+    \ "detach" : "<F10>",
+    \ "set_breakpoint" : "<F11>",
+    \ "eval_under_cursor" : "<F12>",
+    \ "get_context" : "<F13>",
+    \ "eval_visual" : "<Leader>e",
+    \}
+" Refreshing the (Safari) browser window
+noremap <leader><C-r> :silent
+            \ !osascript -e 'tell application "Safari"
+            \ to set URL of current tab of front window to
+            \ (URL of current tab of front window)'<CR>:redraw!<CR>
 
 " PLUGINSTUFF
 "------------------------------------------------------------------------------

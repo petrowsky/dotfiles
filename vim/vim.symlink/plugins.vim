@@ -30,5 +30,8 @@ Plug 'rizzatti/dash.vim'
 Plug 'bling/vim-airline'
 Plug 'nathanaelkane/vim-indent-guides'
 
+" Debug Stuff
+Plug 'joonty/vdebug'
+
 call plug#end()
 filetype plugin indent on
