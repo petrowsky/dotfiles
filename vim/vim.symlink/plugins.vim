@@ -10,6 +10,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-vinegar'
 Plug 'rking/ag.vim'
+Plug 'FelikZ/ctrlp-py-matcher' " improve CtrlP performance
 
 " Git
 Plug 'tpope/vim-fugitive'
