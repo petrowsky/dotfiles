@@ -125,6 +125,9 @@ if has('gui_running')
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16,Menlo\ Regular:h14,Consolas\ Regular:h14,Courier\ New\ Regular:h14
 endif
 
+" A quick way to turn off highlighting
+map <silent> <leader><cr> :noh<cr>
+
 " TABSTUFF
 "------------------------------------------------------------------------------
 set autoindent     " because code should be indented
@@ -214,6 +217,9 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
+
+" Change the current working directory to the current buffer
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " DEVSTUFF
 "------------------------------------------------------------------------------
