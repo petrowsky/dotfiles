@@ -4,7 +4,7 @@
 
 " Customization before loading
 if filereadable(expand("~/.vimrc.before"))
-    source ~/.vimrc.before
+   source ~/.vimrc.before
 endif
 
 "------------------------------------------------------------------------------
@@ -69,7 +69,7 @@ endif
 "
 " Esc key is too far. Let's make it easy.
 " For when I'm not using an emulator with key mapping
-inoremap <C-J> <Esc>
+noremap <C-J> <Esc>
 
 " When using iTerm2, map global key of ctrl-return to ❤
 " Heart char is U+2764. When sending a heart, it will escape you!
@@ -195,6 +195,10 @@ set magic          " Set magic on, for regex
 set showmatch      " show matching braces
 set mat=2          " how many tenths of a second to blink
 
+" Search within file to quickfix
+map <leader>s :vimgrep // <C-r>%<C-b><right><right><right><right><right><right><right><right><right>
+"map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
+
 "FILESTUFF
 "------------------------------------------------------------------------------
 filetype indent plugin on
@@ -220,6 +224,9 @@ endif
 
 " Change the current working directory to the current buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+" Fix line endings
+noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " DEVSTUFF
 "------------------------------------------------------------------------------
