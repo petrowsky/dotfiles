@@ -200,6 +200,9 @@ set mat=2          " how many tenths of a second to blink
 map <leader>s :vimgrep // <C-r>%<C-b><right><right><right><right><right><right><right><right><right>
 "map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
 
+" Find/Replace value under word.
+nnoremap <Leader>fr :%s/\<<C-r><C-w>\>/
+
 "FILESTUFF
 "------------------------------------------------------------------------------
 filetype indent plugin on
@@ -288,6 +291,10 @@ if has('macunix')
 
     let g:airline#extensions#tabline#enabled = 1
 endif
+
+" ---< Syntastic >---
+" Setting up some code checking for Drupal development.
+let g:syntastic_php_phpcs_args="--standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
