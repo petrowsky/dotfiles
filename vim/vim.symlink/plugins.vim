@@ -5,6 +5,10 @@ call plug#begin('~/.vim/plugins')
 " Colorschemes
 Plug 'chriskempson/base16-vim'
 
+" Session stuff
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
+
 " File navigation
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons'

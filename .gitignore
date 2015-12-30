@@ -6,3 +6,6 @@ vim/vim.symlink/autoload/plug.vim
 
 # Don't track netrw history
 vim/vim.symlink/.netrwhist
+
+# Don't save sessions to repo
+vim/vim.symlink/sessions/*
