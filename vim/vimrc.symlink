@@ -268,8 +268,12 @@ noremap <leader><C-r> :silent
 "------------------------------------------------------------------------------
 
 " ---< CtrlP >---
-map <C-f> :CtrlP<CR>
+map <C-f> :CtrlPMRU<CR>
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " ---< NerdTree >---
 map <C-t> :NERDTreeToggle<CR>

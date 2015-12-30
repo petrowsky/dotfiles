@@ -26,6 +26,7 @@ Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-repeat'
 Plug 'godlygeek/tabular'
 Plug 'sickill/vim-pasta'
+Plug 'majutsushi/tagbar'
 Plug 'rizzatti/dash.vim'
 
 " UI Stuff
