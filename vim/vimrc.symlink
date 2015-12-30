@@ -303,6 +303,11 @@ let g:syntastic_php_phpcs_args="--standard=Drupal --extensions=php,module,inc,in
 " ---< Tagbar >---
 nmap <leader>t :TagbarToggle<CR>
 
+
+" ---< ShowMarks >---
+" Tell showmarks to not include the various brace marks (),{}, etc
+let g:showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY"
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
