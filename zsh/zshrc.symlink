@@ -97,3 +97,5 @@ if [[ "$TERM_PROGRAM" = "iTerm.app" ]]; then
     # Stop flow control so we can use <C-s> for saving in Vim.
     stty -ixon
 fi
+
+bindkey '^R' history-incremental-search-backward
