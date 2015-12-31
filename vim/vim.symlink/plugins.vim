@@ -49,6 +49,10 @@ Plug 'joonty/vdebug'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+" Text stuff
+Plug 'kana/vim-textobj-user' " creates new text objects
+Plug 'reedes/vim-textobj-quote' " support curly quotes & more
+
 " Languages
 Plug 'vim-scripts/nginx.vim'
 
