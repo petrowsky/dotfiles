@@ -19,6 +19,7 @@ endif
 " FILESTUFF
 " DEVSTUFF
 " PLUGINSTUFF
+" MISCMAPPINGS
 
 
 " Load plugins
@@ -264,6 +265,11 @@ noremap <leader><C-r> :silent
             \ to set URL of current tab of front window to
             \ (URL of current tab of front window)'<CR>:redraw!<CR>
 
+" Using par executable for wrapping stuff - cleaner!
+if executable("/usr/local/bin/par")
+    set formatprg=par\ -w40
+endif
+
 " PLUGINSTUFF
 "------------------------------------------------------------------------------
 
@@ -307,6 +313,12 @@ nmap <leader>t :TagbarToggle<CR>
 " ---< ShowMarks >---
 " Tell showmarks to not include the various brace marks (),{}, etc
 let g:showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY"
+
+" MISCMAPPINGS
+"------------------------------------------------------------------------------
+
+" Straighten quotes
+map <leader>" :%s/\(“\\|”\)/"/g
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
