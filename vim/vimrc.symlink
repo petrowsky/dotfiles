@@ -314,11 +314,24 @@ nmap <leader>t :TagbarToggle<CR>
 " Tell showmarks to not include the various brace marks (),{}, etc
 let g:showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY"
 
+" ---< vim-textobj-quote >---
+" Support for curly quotes on certain file types.
+augroup textobj_quote
+  autocmd!
+  autocmd FileType markdown call textobj#quote#init()
+  autocmd FileType textile call textobj#quote#init()
+  autocmd FileType text call textobj#quote#init({'educate': 0})
+augroup END
+
 " MISCMAPPINGS
 "------------------------------------------------------------------------------
 
 " Straighten quotes
-map <leader>" :%s/\(“\\|”\)/"/g
+nmap <leader>" :%s/\(“\\|”\)/"/g<CR>
+nmap <leader>' :%s/\(‘\\|’\)/'/g<CR>
+
+" Wrap all lines in file within quotes
+nmap ww" :%s/.*/"&"<CR>:noh<CR>
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
