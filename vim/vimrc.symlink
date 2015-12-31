@@ -333,6 +333,9 @@ nmap <leader>' :%s/\(‘\\|’\)/'/g<CR>
 " Wrap all lines in file within quotes
 nmap ww" :%s/.*/"&"<CR>:noh<CR>
 
+" Open markdown docs within Marked2.app
+map <leader>p :MarkedOpen<CR>
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local

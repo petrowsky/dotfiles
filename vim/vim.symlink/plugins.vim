@@ -53,6 +53,9 @@ Plug 'honza/vim-snippets'
 Plug 'kana/vim-textobj-user' " creates new text objects
 Plug 'reedes/vim-textobj-quote' " support curly quotes & more
 
+" External apps
+Plug 'itspriddle/vim-marked' " for Marked2 on OS x
+
 " Languages
 Plug 'vim-scripts/nginx.vim'
 
