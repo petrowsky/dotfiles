@@ -59,5 +59,8 @@ Plug 'itspriddle/vim-marked' " for Marked2 on OS x
 " Languages
 Plug 'vim-scripts/nginx.vim'
 
+" Drupal
+Plug 'git://drupalcode.org/project/vimrc.git', {'branch': '7.x-1.x', 'dir': '~/.vim/plugins/vim-drupal', 'rtp': 'bundle/vim-plugin-for-drupal/'}
+
 call plug#end()
 filetype plugin indent on
