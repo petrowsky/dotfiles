@@ -34,8 +34,8 @@ set hidden            " Don't kill my buffers.
 let mapleader = " "
 
 " Because editing ~/.vimrc happens a lot.
-map <leader>conf :e! $MYVIMRC<cr>
-nmap <leader>src :source $MYVIMRC<cr>
+nnoremap <leader>conf :e! $MYVIMRC<cr>
+nnoremap <leader>src :source $MYVIMRC<cr>
 
 " Using the OS clipboard is nice
 set clipboard=unnamed
@@ -307,7 +307,7 @@ endif
 let g:syntastic_php_phpcs_args="--standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
 
 " ---< Tagbar >---
-nmap <leader>t :TagbarToggle<CR>
+nnoremap <leader>t :TagbarToggle<CR>
 
 
 " ---< ShowMarks >---
@@ -327,11 +327,11 @@ augroup END
 "------------------------------------------------------------------------------
 
 " Straighten quotes
-nmap <leader>" :%s/\(“\\|”\)/"/g<CR>
-nmap <leader>' :%s/\(‘\\|’\)/'/g<CR>
+nnoremap <leader>" :%s/\(“\\|”\)/"/g<CR>
+nnoremap <leader>' :%s/\(‘\\|’\)/'/g<CR>
 
 " Wrap all lines in file within quotes
-nmap ww" :%s/.*/"&"<CR>:noh<CR>
+nnoremap ww" :%s/.*/"&"<CR>:noh<CR>
 
 " Open markdown docs within Marked2.app
 map <leader>p :MarkedOpen<CR>
