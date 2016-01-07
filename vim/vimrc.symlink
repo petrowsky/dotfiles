@@ -168,8 +168,8 @@ nnoremap <C-l> <C-w>l
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
-nnoremap <C-e> 3<C-e>
-nnoremap <C-y> 3<C-y>
+nnoremap <C-j> 5<C-e>
+nnoremap <C-k> 5<C-y>
 
 " Just like the little "x" on windows. ;)
 nnoremap <C-x> :bd<CR>
