@@ -46,8 +46,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'joonty/vdebug'
 
 " Snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " Text stuff
 Plug 'kana/vim-textobj-user' " creates new text objects
