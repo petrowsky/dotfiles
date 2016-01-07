@@ -127,9 +127,6 @@ if has('gui_running')
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16,Menlo\ Regular:h14,Consolas\ Regular:h14,Courier\ New\ Regular:h14
 endif
 
-" A quick way to turn off highlighting
-map <silent> <leader><cr> :noh<cr>
-
 " TABSTUFF
 "------------------------------------------------------------------------------
 set autoindent     " because code should be indented
@@ -278,8 +275,11 @@ map <C-f> :CtrlPMRU<CR>
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-"let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" The following only applies when ag (the_silver_searcher) is not installed.
+" let g:ctrlp_custom_ignore = {
+"   \ 'dir': '\v[\/]\.(git|hg|svn)$',
+"   \ }
 
 " ---< NerdTree >---
 map <C-t> :NERDTreeToggle<CR>
@@ -338,6 +338,14 @@ noremap <leader>p :MarkedOpen<CR>
 
 " Beautify JSON
 nnoremap <leader>J :%!python -m json.tool<CR>:set ft=json<CR>
+
+" Insert lines
+nnoremap <cr> o<esc>
+nnoremap <S-cr> O<esc>
+
+" A quick way to turn off highlighting
+map <silent> <leader><cr> :noh<cr>
+
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
