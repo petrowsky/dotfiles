@@ -1,4 +1,4 @@
-" Inspiration
+" Inspiration (use gx when on the url to open)
 " https://github.com/thoughtbot/dotfiles/blob/master/vimrc
 " https://github.com/nicknisi/dotfiles/blob/master/vim/vimrc.symlink
 " https://github.com/amix/vimrc
@@ -199,7 +199,7 @@ map <leader>s :vimgrep // <C-r>%<C-b><right><right><right><right><right><right><
 "map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
 
 " Find/Replace value under word.
-nnoremap <Leader>fr :%s/\<<C-r><C-w>\>/
+nnoremap <Leader>r :%s/\<<C-r><C-w>\>/
 
 "FILESTUFF
 "------------------------------------------------------------------------------
