@@ -1,6 +1,7 @@
 " Inspiration (use gx when on the url to open)
 " https://github.com/thoughtbot/dotfiles/blob/master/vimrc
 " https://github.com/nicknisi/dotfiles/blob/master/vim/vimrc.symlink
+" https://github.com/skwp/dotfiles
 " https://github.com/amix/vimrc
 
 " Customization before loading
