@@ -168,8 +168,8 @@ nnoremap <C-l> <C-w>l
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
-nnoremap <C-j> 5<C-e>
-nnoremap <C-k> 5<C-y>
+nnoremap <S-j> 5<C-e>
+nnoremap <S-k> 5<C-y>
 
 " Just like the little "x" on windows. ;)
 nnoremap <C-x> :bd<CR>
@@ -193,6 +193,9 @@ set nolazyredraw   " don't redraw while executing macros
 set magic          " Set magic on, for regex
 set showmatch      " show matching braces
 set mat=2          " how many tenths of a second to blink
+
+" Matching search hits to my airline theme.
+hi Search term=reverse ctermfg=8 ctermbg=3 guifg=#242424 guibg=#92bd48
 
 " Search within file to quickfix
 map <leader>s :vimgrep // <C-r>%<C-b><right><right><right><right><right><right><right><right><right>
@@ -303,7 +306,8 @@ if has('macunix')
 endif
 
 " ---< Syntastic >---
-" Setting up some code checking for Drupal development.
+" Setting up some code checking for Drupal development. This is set by the
+" vim drupal plugin if install (see https://www.drupal.org/project/vimrc)
 let g:syntastic_php_phpcs_args="--standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
 
 " ---< Tagbar >---
