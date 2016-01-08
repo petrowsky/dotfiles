@@ -41,6 +41,7 @@ nnoremap <leader>src :source $MYVIMRC<cr>
 " Using the OS clipboard is nice
 set clipboard=unnamed
 
+
 " GENERAlSTUFF
 "------------------------------------------------------------------------------
 
@@ -67,6 +68,7 @@ if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim
 endif
 
+
 " INSERTMODE
 "------------------------------------------------------------------------------
 "
@@ -85,6 +87,7 @@ noremap <C-s> :update<CR>
 
 " Use one space, not two, after punctuation.
 set nojoinspaces
+
 
 " DISPLAYSTUFF
 "------------------------------------------------------------------------------
@@ -127,6 +130,7 @@ if has('gui_running')
     set guioptions-=T           " Remove the toolbar
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16,Menlo\ Regular:h14,Consolas\ Regular:h14,Courier\ New\ Regular:h14
 endif
+
 
 " TABSTUFF
 "------------------------------------------------------------------------------
@@ -180,8 +184,10 @@ nnoremap <S-l> :bnext<cr>
 " Just like the little "x" on windows. ;)
 nnoremap <C-x> :bd<CR>
 
+
 " SPELLINGSTUFF
 "------------------------------------------------------------------------------
+
 " Spelling file can be symlinked
 set spellfile=$HOME/.vim-spell-en.utf-8.add
 
@@ -191,6 +197,7 @@ set complete+=kspell
 
 " SEARCHINGSTUFF
 "------------------------------------------------------------------------------
+
 set ignorecase     " case insensitive searching
 set smartcase      " case-sensitive if expresson contains a capital letter
 set hlsearch       " highlight search matches
@@ -210,8 +217,10 @@ map <leader>s :vimgrep // <C-r>%<C-b><right><right><right><right><right><right><
 " Find/Replace value under word.
 nnoremap <Leader>r :%s/\<<C-r><C-w>\>/
 
+
 "FILESTUFF
 "------------------------------------------------------------------------------
+
 filetype indent plugin on
 set encoding=utf-8
 
@@ -238,6 +247,7 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Fix line endings
 noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+
 
 " DEVSTUFF
 "------------------------------------------------------------------------------
@@ -275,6 +285,7 @@ noremap <leader><C-r> :silent
 if executable("/usr/local/bin/par")
     set formatprg=par\ -w40
 endif
+
 
 " PLUGINSTUFF
 "------------------------------------------------------------------------------
@@ -342,6 +353,7 @@ augroup textobj_quote
     autocmd FileType textile call textobj#quote#init()
     autocmd FileType text call textobj#quote#init({'educate': 0})
 augroup END
+
 
 " MISCMAPPINGS
 "------------------------------------------------------------------------------
