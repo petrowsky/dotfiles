@@ -363,6 +363,12 @@ augroup textobj_quote
     autocmd FileType text call textobj#quote#init({'educate': 0})
 augroup END
 
+" ---< UltiSnips >---
+" Because of YouCompleteMe UltiSnips needs different mappings.
+let g:UltiSnipsExpandTrigger="<C-Space>"
+let g:UltiSnipsJumpForwardTrigger = "<cr>"
+let g:UltiSnipsJumpBackwardTrigger="<s-cr>"
+let g:UltiSnipsEditSplit = "vertical"
 
 " MISCMAPPINGS
 "------------------------------------------------------------------------------
