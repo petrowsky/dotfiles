@@ -110,6 +110,7 @@ set number numberwidth=5
 set scrolloff=3    " Because seeing more context is a nice thing.
 set ttyfast
 set visualbell
+set shortmess=fxoO
 
 " If Airline is installed then this will be overwritten by plugin settings
 if has('statusline')
@@ -182,7 +183,7 @@ nnoremap <S-h> :bprev<cr>
 nnoremap <S-l> :bnext<cr>
 
 " Just like the little "x" on windows. ;)
-nnoremap <C-x> :bd<CR>
+" nnoremap <C-x> :bd<CR>
 
 
 " SPELLINGSTUFF
@@ -305,6 +306,10 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 map <C-t> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize=40
 
+" ---< Sessions >---
+let g:session_autosave = 'no'
+let g:session_autoload = 'no'
+"
 " ---< Airline >---
 " Make sure to use a patched font https://github.com/ryanoasis/nerd-fonts
 if has('macunix')
@@ -383,3 +388,4 @@ map <silent> <leader><cr> :noh<cr>
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+
