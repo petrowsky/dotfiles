@@ -57,6 +57,13 @@ Plug 'itspriddle/vim-marked' " for Marked2 on OS x
 
 " Languages
 Plug 'vim-scripts/nginx.vim'
+Plug 'mattn/emmet-vim', { 'for': 'html' }
+Plug 'othree/html5.vim', { 'for': 'html' }
+Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
+Plug 'ap/vim-css-color', { 'for': 'css' }
+Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
+Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 
 " Drupal
 Plug 'git://drupalcode.org/project/vimrc.git', {'branch': '7.x-1.x', 'dir': '~/.vim/plugins/vim-drupal', 'rtp': 'bundle/vim-plugin-for-drupal/'}
