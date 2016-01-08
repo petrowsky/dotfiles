@@ -98,12 +98,16 @@ endif
 let base16colorspace=256
 set background=dark
 colorscheme base16-bright
+" Overrides to colorscheme based on preferences
+hi Normal guibg=#16191E
+hi LineNr guibg=#20232A
 
 " Display of width and line numbering
 set textwidth=80
 set colorcolumn=+1
-hi ColorColumn ctermbg=234 guibg=#2E3234
+hi ColorColumn ctermbg=234 guibg=#20232A
 set nowrap
+set nolist
 
 set number numberwidth=5
 "set relativenumber
