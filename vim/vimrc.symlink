@@ -254,7 +254,7 @@ noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 "------------------------------------------------------------------------------
 
 " Like a faster update time for plugins like GitGutter
-set updatetime=250
+set updatetime=1000
 
 " Vdebug
 let g:vdebug_options={"port" : 9001}
