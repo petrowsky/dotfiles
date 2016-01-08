@@ -42,7 +42,7 @@ nnoremap <leader>src :source $MYVIMRC<cr>
 set clipboard=unnamed
 
 
-" GENERAlSTUFF
+" GENERALSTUFF
 "------------------------------------------------------------------------------
 
 set backspace=2   " Backspace deletes like most programs in insert mode
@@ -250,9 +250,11 @@ endif
 " Change the current working directory to the current buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-" Fix line endings
+" Fix line endings - manual
 noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
+" Trim trailing whitespace just before save
+autocmd BufWritePre * :%s/\s\+$//e
 
 " DEVSTUFF
 "------------------------------------------------------------------------------
