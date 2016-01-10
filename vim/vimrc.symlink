@@ -9,6 +9,7 @@ if filereadable(expand("~/.vimrc.before"))
    source ~/.vimrc.before
 endif
 
+" TABLE OF CONTENTS
 "------------------------------------------------------------------------------
 " GENERALSTUFF
 " INSERTMODE
