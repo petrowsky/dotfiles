@@ -41,6 +41,7 @@ Plug 'rizzatti/dash.vim'
 " UI Stuff
 Plug 'bling/vim-airline'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'junegunn/goyo.vim'
 
 " Debug Stuff
 Plug 'joonty/vdebug'
