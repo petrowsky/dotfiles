@@ -190,6 +190,10 @@ nnoremap <S-l> :bnext<cr>
 " Just like the little "x" on windows. ;)
 " nnoremap <C-x> :bd<CR>
 
+" Resizing windows is a bit easier with mappings.
+nnoremap <silent> <leader>] :exe "vertical resize " . (winwidth(0) * 3/2)<cr>
+nnoremap <silent> <leader>[ :exe "vertical resize " . (winwidth(0) * 2/3)<cr>
+
 
 " SPELLINGSTUFF
 "------------------------------------------------------------------------------
