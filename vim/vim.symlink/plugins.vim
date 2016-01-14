@@ -37,6 +37,7 @@ Plug 'godlygeek/tabular'
 Plug 'sickill/vim-pasta'
 Plug 'majutsushi/tagbar'
 Plug 'rizzatti/dash.vim'
+" Plug 'vim-scripts/Rainbow-Parenthsis-Bundle'
 
 " UI Stuff
 Plug 'bling/vim-airline'
