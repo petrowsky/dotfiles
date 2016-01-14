@@ -40,7 +40,7 @@ Plug 'rizzatti/dash.vim'
 " Plug 'vim-scripts/Rainbow-Parenthsis-Bundle'
 
 " UI Stuff
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'junegunn/goyo.vim'
 
