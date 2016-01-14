@@ -118,6 +118,10 @@ set ttyfast
 set visualbell
 set shortmess=fxoO
 
+" Display whitespace stuff
+set list listchars=tab:»·,trail:·,nbsp:·,eol:¬
+hi NonText guifg=#3C4459
+
 " If Airline is installed then this will be overwritten by plugin settings
 if has('statusline')
     set laststatus=2
@@ -138,7 +142,6 @@ if has('gui_running')
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16,Menlo\ Regular:h14,Consolas\ Regular:h14,Courier\ New\ Regular:h14
 endif
 
-
 " TABSTUFF
 "------------------------------------------------------------------------------
 set autoindent     " because code should be indented
@@ -150,8 +153,6 @@ set shiftwidth=4   " number of spaces to use for indent and unindent
 set shiftround     " round indent to a multiple of 'shiftwidth'
 set completeopt+=longest
 
-" Display whitespace stuff
-set list listchars=tab:»·,trail:·,nbsp:·,eol:¬
 
 " Tab navigation/manipulation. Just like h,j,k,l - but with 't'
 nnoremap th  :tabfirst<CR>
