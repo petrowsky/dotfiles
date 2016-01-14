@@ -404,6 +404,9 @@ nnoremap <S-cr> O<esc>
 " A quick way to turn off highlighting
 map <silent> <leader><cr> :noh<cr>
 
+" Sudo, make me a sandwich - (root write access)
+cmap w!! w !sudo tee % >/dev/null
+
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
