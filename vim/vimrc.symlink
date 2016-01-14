@@ -1,4 +1,5 @@
 " Inspiration (use gx when on the url to open)
+"
 " https://github.com/thoughtbot/dotfiles/blob/master/vimrc
 " https://github.com/nicknisi/dotfiles/blob/master/vim/vimrc.symlink
 " https://github.com/skwp/dotfiles
@@ -36,7 +37,7 @@ set hidden            " Don't kill my buffers.
 let mapleader = " "
 
 " Because editing ~/.vimrc happens a lot.
-nnoremap <leader>conf :e! $MYVIMRC<cr>
+nnoremap <leader>conf :e! ~/.dotfiles/vim/vimrc.symlink<cr>
 nnoremap <leader>src :source $MYVIMRC<cr>
 
 " Using the OS clipboard is nice
@@ -191,8 +192,8 @@ nnoremap <S-l> :bnext<cr>
 " nnoremap <C-x> :bd<CR>
 
 " Resizing windows is a bit easier with mappings.
-nnoremap <silent> <leader>] :exe "vertical resize " . (winwidth(0) * 3/2)<cr>
-nnoremap <silent> <leader>[ :exe "vertical resize " . (winwidth(0) * 2/3)<cr>
+nnoremap <silent> <leader>[ :exe "vertical resize " . (winwidth(0) * 3/2)<cr>
+nnoremap <silent> <leader>] :exe "vertical resize " . (winwidth(0) * 2/3)<cr>
 
 
 " SPELLINGSTUFF
