@@ -181,9 +181,11 @@ nnoremap <C-l> <C-w>l
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
-" Faster scrolling with Shift
+
+" Faster scrolling with Shift (and replace J[oin] with leader)
 nnoremap <S-j> 5<C-e>
 nnoremap <S-k> 5<C-y>
+nnoremap <leader>j J
 
 " Faster buffer switching - but still enjoy unimpaired.
 nnoremap <S-h> :bprev<cr>
@@ -193,8 +195,8 @@ nnoremap <S-l> :bnext<cr>
 " nnoremap <C-x> :bd<CR>
 
 " Resizing windows is a bit easier with mappings.
-nnoremap <silent> <leader>[ :exe "vertical resize " . (winwidth(0) * 3/2)<cr>
-nnoremap <silent> <leader>] :exe "vertical resize " . (winwidth(0) * 2/3)<cr>
+nnoremap <silent> <leader>[ :exe "vertical resize -10"<cr>
+nnoremap <silent> <leader>] :exe "vertical resize +10"<cr>
 
 
 " SPELLINGSTUFF
