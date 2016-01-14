@@ -318,6 +318,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 "   \ }
 
 " ---< NerdTree >---
+" Because jumping back in the tag stack is great for help
+" and we're hijacking <c-t> for NERDTree sidebar.
+nnoremap <C-[> <C-t>
 map <C-t> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize=40
 
