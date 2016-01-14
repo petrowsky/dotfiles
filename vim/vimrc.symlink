@@ -352,10 +352,10 @@ nnoremap <leader>t :TagbarToggle<CR>
 " https://github.com/godlygeek/tabular
 " http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
 if exists(":Tabularize")
-    nmap <leader>= :Tabularize /=<cr>
-    vmap <leader>= :Tabularize /=<cr>
-    nmap <leader>: :Tabularize /:\zs<cr>
-    vmap <leader>: :Tabularize /:\zs<cr>
+    nnoremap <leader>= :Tabularize /=<cr>
+    vnoremap <leader>= :Tabularize /=<cr>
+    nnoremap <leader>: :Tabularize /:\zs<cr>
+    vnoremap <leader>: :Tabularize /:\zs<cr>
 endif
 
 " ---< ShowMarks >---
