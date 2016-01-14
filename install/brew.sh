@@ -65,8 +65,9 @@ brew install z
 brew install homebrew/php/composer
 brew install homebrew/php/drupal-code-sniffer
 
-# Javascript
+# Javascript/Node
 brew install node
+brew install libsass
 
 # Image tools
 brew install exif
