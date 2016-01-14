@@ -329,6 +329,15 @@ let g:session_autosave = 'no'
 let g:session_autoload = 'no'
 "
 " ---< Airline >---
+
+" Thanks to this, we can see the decimal value under the cursor
+" http://derekwyatt.org/2015/07/27/getting-character-under-cursor-in-vim/
+function! CursorChar()
+    return char2nr(matchstr(getline('.'), '\%' . col('.') . 'c.'))
+endfunction
+" Changing what section_z shows to include value under cursor.
+" let g:airline_section_z .= 'not implemented yet'
+
 " Make sure to use a patched font https://github.com/ryanoasis/nerd-fonts
 if has('macunix')
     if !exists('g:airline_symbols')
