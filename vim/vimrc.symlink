@@ -112,6 +112,12 @@ inoremap <C-h> <left>
 inoremap <C-l> <right>
 
 
+" VISUALMODE
+"------------------------------------------------------------------------------
+vnoremap <C-j> <esc>
+vnoremap < <gv
+vnoremap > >gv
+
 " DISPLAYSTUFF
 "------------------------------------------------------------------------------
 if &term == 'xterm' || &term == 'screen'
