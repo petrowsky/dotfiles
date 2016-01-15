@@ -4,6 +4,7 @@
 " https://github.com/nicknisi/dotfiles/blob/master/vim/vimrc.symlink
 " https://github.com/skwp/dotfiles
 " https://github.com/amix/vimrc
+" https://github.com/bling/dotvim
 
 " Customization before loading
 if filereadable(expand("~/.vimrc.before"))
