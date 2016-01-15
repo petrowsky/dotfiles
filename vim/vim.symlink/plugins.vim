@@ -42,13 +42,15 @@ Plug 'godlygeek/tabular'
 Plug 'sickill/vim-pasta'
 Plug 'majutsushi/tagbar'
 Plug 'rizzatti/dash.vim'
-Plug 'Raimondi/delimitMate'
+Plug 'jiangmiao/auto-pairs'
+Plug 'gregsexton/MatchTag'
 " Plug 'vim-scripts/Rainbow-Parenthsis-Bundle'
 
 " UI Stuff
 Plug 'vim-airline/vim-airline'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'junegunn/goyo.vim'
+Plug 'mhinz/vim-startify'
 
 " Debug Stuff
 Plug 'joonty/vdebug'
@@ -59,6 +61,8 @@ Plug 'valloric/youcompleteme'
 
 " Text stuff
 Plug 'kana/vim-textobj-user' " creates new text objects
+Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-entire'
 Plug 'reedes/vim-textobj-quote' " support curly quotes & more
 
 " Utilities
