@@ -15,11 +15,15 @@ Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 
 Plug 'tpope/vim-vinegar'
 Plug 'rking/ag.vim'
 Plug 'FelikZ/ctrlp-py-matcher' " improve CtrlP performance
-Plug 'easymotion/vim-easymotion'
+"Plug 'easymotion/vim-easymotion'
+Plug 'justinmk/vim-sneak'
 
 " Display stuff
 "Plug 'xsunsmile/showmarks'
 Plug 'chrisbra/Colorizer'
+
+" Window stuff
+Plug 'qpkorr/vim-bufkill'
 
 " Git
 Plug 'tpope/vim-fugitive'
