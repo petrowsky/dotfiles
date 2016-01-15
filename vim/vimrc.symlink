@@ -11,6 +11,22 @@ if filereadable(expand("~/.vimrc.before"))
    source ~/.vimrc.before
 endif
 
+function! Preserve(command)
+    " preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " do the business:
+    execute a:command
+    " clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
+function! StripTrailingWhitespace()
+    call Preserve("%s/\\s\\+$//e")
+endfunction
+
 " TABLE OF CONTENTS
 "------------------------------------------------------------------------------
 " GENERALSTUFF
@@ -111,6 +127,7 @@ set colorcolumn=+1
 hi ColorColumn ctermbg=234 guibg=#20232A
 set nowrap
 set nolist
+set linespace=3
 
 set number numberwidth=5
 "set relativenumber
@@ -265,7 +282,7 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Trim trailing whitespace just before save
-autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * call StripTrailingWhitespace()
 
 " DEVSTUFF
 "------------------------------------------------------------------------------
@@ -430,6 +447,17 @@ nnoremap <silent> <leader>gp :Git push<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>gr :Gremove<CR>
 
+" ---< vim-indent-guides >---
+let g:indent_guides_start_level=1
+let g:indent_guides_guide_size=1
+let g:indent_guides_enable_on_vim_startup=0
+let g:indent_guides_color_change_percent=4
+
+" ---< Startify >---
+let g:startify_show_sessions = 1
+let g:startify_session_dir = '~/.vim/sessions'
+let g:startify_change_to_vcs_root = 1
+
 " MISCMAPPINGS
 "------------------------------------------------------------------------------
 
@@ -455,6 +483,9 @@ map <silent> <leader><cr> :noh<cr>
 
 " Sudo, make me a sandwich - (root write access)
 cmap w!! w !sudo tee % >/dev/null
+
+" Sorting css/scss
+autocmd FileType css,scss nnoremap <silent> <leader>S vi{:sort<CR>
 
 
 " Local config
