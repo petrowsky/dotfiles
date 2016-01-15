@@ -311,6 +311,7 @@ map <C-f> :CtrlPMRU<CR>
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=*/node_modules/*
 
 " The following only applies when ag (the_silver_searcher) is not installed.
 " let g:ctrlp_custom_ignore = {
@@ -379,6 +380,10 @@ endif
 " ---< ShowMarks >---
 " Tell showmarks to not include the various brace marks (),{}, etc
 let g:showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY"
+
+" ---< Bufkill >---
+" Because keeping your windows in place is less disorienting
+nnoremap <leader>bd :BD<CR>
 
 " ---< vim-textobj-quote >---
 " Support for curly quotes on certain file types.
