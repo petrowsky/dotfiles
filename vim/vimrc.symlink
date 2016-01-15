@@ -354,6 +354,9 @@ if has('macunix')
 
     let g:airline#extensions#tabline#enabled = 1
 endif
+"
+" Let's only show the filename - we typically know where we are.
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " ---< Syntastic >---
 " Setting up some code checking for Drupal development. This is set by the
