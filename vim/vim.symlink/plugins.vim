@@ -17,6 +17,7 @@ Plug 'rking/ag.vim'
 Plug 'FelikZ/ctrlp-py-matcher' " improve CtrlP performance
 "Plug 'easymotion/vim-easymotion'
 Plug 'justinmk/vim-sneak'
+Plug 'terryma/vim-multiple-cursors'
 
 " Display stuff
 "Plug 'xsunsmile/showmarks'
@@ -58,6 +59,9 @@ Plug 'valloric/youcompleteme'
 " Text stuff
 Plug 'kana/vim-textobj-user' " creates new text objects
 Plug 'reedes/vim-textobj-quote' " support curly quotes & more
+
+" Utilities
+Plug 'tpope/vim-speeddating'
 
 " External apps
 Plug 'itspriddle/vim-marked' " for Marked2 on OS x
