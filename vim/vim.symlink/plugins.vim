@@ -42,6 +42,7 @@ Plug 'godlygeek/tabular'
 Plug 'sickill/vim-pasta'
 Plug 'majutsushi/tagbar'
 Plug 'rizzatti/dash.vim'
+Plug 'Raimondi/delimitMate'
 " Plug 'vim-scripts/Rainbow-Parenthsis-Bundle'
 
 " UI Stuff
