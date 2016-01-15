@@ -316,16 +316,23 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set wildignore+=*/node_modules/*
 
 " The following only applies when ag (the_silver_searcher) is not installed.
-" let g:ctrlp_custom_ignore = {
-"   \ 'dir': '\v[\/]\.(git|hg|svn)$',
-"   \ }
+let g:ctrlp_custom_ignore = {
+    \ 'dir': '\v[\/]\.(git|hg|svn|idea)$',
+    \ 'file': '\v\.DS_Store$'
+    \ }
 
 " ---< NerdTree >---
 " Because jumping back in the tag stack is great for help
 " and we're hijacking <c-t> for NERDTree sidebar.
 nnoremap <C-[> <C-t>
 map <C-t> :NERDTreeToggle<CR>
-let g:NERDTreeWinSize=40
+let NERDTreeWinSize=40
+let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen=0
+let NERDTreeShowLineNumbers=1
+let NERDTreeChDirMode=0
+let NERDTreeShowBookmarks=1
+let NERDTreeIgnore=['\.git','\.hg']
 
 " ---< Sessions >---
 let g:session_autosave = 'no'
