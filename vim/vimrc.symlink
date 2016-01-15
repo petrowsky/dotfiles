@@ -107,6 +107,10 @@ noremap <C-s> :update<CR>
 " Use one space, not two, after punctuation.
 set nojoinspaces
 
+" Familiar moving while typing.
+inoremap <C-h> <left>
+inoremap <C-l> <right>
+
 
 " DISPLAYSTUFF
 "------------------------------------------------------------------------------
@@ -230,24 +234,31 @@ set complete+=kspell
 " SEARCHINGSTUFF
 "------------------------------------------------------------------------------
 
-set ignorecase     " case insensitive searching
-set smartcase      " case-sensitive if expresson contains a capital letter
-set hlsearch       " highlight search matches
-set incsearch      " set incremental search, like modern browsers
-set lazyredraw   " don't redraw while executing macros
-set magic          " Set magic on, for regex
-set showmatch      " show matching braces
-set matchtime=2          " how many tenths of a second to blink
+set ignorecase  " case insensitive searching
+set smartcase   " case-sensitive if expresson contains a capital letter
+set hlsearch    " highlight search matches
+set incsearch   " set incremental search, like modern browsers
+set lazyredraw  " don't redraw while executing macros
+set magic       " Set magic on, for regex
+set showmatch   " show matching braces
+set matchtime=2 " how many tenths of a second to blink
 
 " Matching search hits to my airline theme.
 hi Search term=reverse ctermfg=8 ctermbg=3 guifg=#242424 guibg=#92bd48
 
 " Search within file to quickfix
 map <leader>s :vimgrep // <C-r>%<C-b><right><right><right><right><right><right><right><right><right>
-"map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
+map <leader>/ :vimgrep // **/*<left><left><left><left><left><left>
 
 " Find/Replace value under word.
-nnoremap <Leader>r :%s/\<<C-r><C-w>\>/
+nnoremap <leader>r :%s/\<<C-r><C-w>\>/
+
+" Better regexing
+nnoremap / /\v
+vnoremap / /\v
+nnoremap ? ?\v
+vnoremap ? ?\v
+nnoremap :s/ :s/\v
 
 
 "FILESTUFF
