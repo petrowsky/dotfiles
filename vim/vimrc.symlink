@@ -217,10 +217,10 @@ set ignorecase     " case insensitive searching
 set smartcase      " case-sensitive if expresson contains a capital letter
 set hlsearch       " highlight search matches
 set incsearch      " set incremental search, like modern browsers
-set nolazyredraw   " don't redraw while executing macros
+set lazyredraw   " don't redraw while executing macros
 set magic          " Set magic on, for regex
 set showmatch      " show matching braces
-set mat=2          " how many tenths of a second to blink
+set matchtime=2          " how many tenths of a second to blink
 
 " Matching search hits to my airline theme.
 hi Search term=reverse ctermfg=8 ctermbg=3 guifg=#242424 guibg=#92bd48
@@ -248,7 +248,8 @@ endif
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
+  set grepprg=ag\ --nogroup\ --column\ --smart-case\ --nocolor\ --follow
+  set grepformat=%f:%l:%c:%m
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
@@ -401,6 +402,18 @@ let g:UltiSnipsExpandTrigger="<C-Space>"
 let g:UltiSnipsJumpForwardTrigger = "<cr>"
 let g:UltiSnipsJumpBackwardTrigger="<s-cr>"
 let g:UltiSnipsEditSplit = "vertical"
+let g:UltiSnipsSnippetsDir='~/.vim/snippets'
+
+" ---< Fugitive >---
+" Git time savers
+nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>gd :Gdiff<CR>
+nnoremap <silent> <leader>gc :Gcommit<CR>
+nnoremap <silent> <leader>gb :Gblame<CR>
+nnoremap <silent> <leader>gl :Glog<CR>
+nnoremap <silent> <leader>gp :Git push<CR>
+nnoremap <silent> <leader>gw :Gwrite<CR>
+nnoremap <silent> <leader>gr :Gremove<CR>
 
 " MISCMAPPINGS
 "------------------------------------------------------------------------------
