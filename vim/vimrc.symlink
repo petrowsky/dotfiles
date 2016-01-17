@@ -1,10 +1,15 @@
 " Inspiration (use gx when on the url to open)
 "
+" Load the raw.* files into a buffer using gf.
 " https://github.com/thoughtbot/dotfiles/blob/master/vimrc
+"   https://github.com/thoughtbot/dotfiles/blob/master/vimrc
 " https://github.com/nicknisi/dotfiles/blob/master/vim/vimrc.symlink
+"   https://raw.githubusercontent.com/nicknisi/dotfiles/master/vim/vimrc.symlink
 " https://github.com/skwp/dotfiles
 " https://github.com/amix/vimrc
+"   https://raw.githubusercontent.com/amix/vimrc/master/vimrcs/extended.vim
 " https://github.com/bling/dotvim
+"   https://raw.githubusercontent.com/bling/dotvim/master/vimrc
 
 " Customization before loading
 if filereadable(expand("~/.vimrc.before"))
@@ -309,7 +314,7 @@ autocmd BufWritePre * call StripTrailingWhitespace()
 "------------------------------------------------------------------------------
 
 " Like a faster update time for plugins like GitGutter
-set updatetime=1000
+set updatetime=600
 
 " Vdebug
 let g:vdebug_options={"port" : 9001}
