@@ -1,88 +1,89 @@
 filetype off
-
+"
+" https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugins')
 
 " Colorschemes
-Plug 'chriskempson/base16-vim'
+Plug 'https://github.com/chriskempson/base16-vim'
 
 " Session stuff
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
+Plug 'https://github.com/xolox/vim-misc'
+Plug 'https://github.com/xolox/vim-session'
 
 " File navigation
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons'
-Plug 'tpope/vim-vinegar'
-Plug 'rking/ag.vim'
-Plug 'FelikZ/ctrlp-py-matcher' " improve CtrlP performance
-"Plug 'easymotion/vim-easymotion'
-Plug 'justinmk/vim-sneak'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'https://github.com/ctrlpvim/ctrlp.vim'
+Plug 'https://github.com/scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin' | Plug 'https://github.com/ryanoasis/vim-devicons'
+Plug 'https://github.com/tpope/vim-vinegar'
+Plug 'https://github.com/rking/ag.vim'
+Plug 'https://github.com/FelikZ/ctrlp-py-matcher' " improve CtrlP performance
+"Plug 'https://github.com/easymotion/vim-easymotion'
+Plug 'https://github.com/justinmk/vim-sneak'
+Plug 'https://github.com/terryma/vim-multiple-cursors'
 
 " Display stuff
-"Plug 'xsunsmile/showmarks'
-Plug 'chrisbra/Colorizer'
+"Plug 'https://github.com/xsunsmile/showmarks'
+Plug 'https://github.com/chrisbra/Colorizer'
 
 " Window stuff
-Plug 'qpkorr/vim-bufkill'
+Plug 'https://github.com/qpkorr/vim-bufkill'
 
 " Git
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+Plug 'https://github.com/tpope/vim-fugitive'
+Plug 'https://github.com/airblade/vim-gitgutter'
 
 " Dev stuff
-Plug 'scrooloose/syntastic'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-ragtag'
-Plug 'tpope/vim-repeat'
-Plug 'godlygeek/tabular'
-Plug 'sickill/vim-pasta'
-Plug 'majutsushi/tagbar'
-Plug 'rizzatti/dash.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'gregsexton/MatchTag'
-" Plug 'vim-scripts/Rainbow-Parenthsis-Bundle'
+Plug 'https://github.com/scrooloose/syntastic'
+Plug 'https://github.com/tpope/vim-surround'
+Plug 'https://github.com/tpope/vim-commentary'
+Plug 'https://github.com/tpope/vim-unimpaired'
+Plug 'https://github.com/tpope/vim-endwise'
+Plug 'https://github.com/tpope/vim-ragtag'
+Plug 'https://github.com/tpope/vim-repeat'
+Plug 'https://github.com/godlygeek/tabular'
+Plug 'https://github.com/sickill/vim-pasta'
+Plug 'https://github.com/majutsushi/tagbar'
+Plug 'https://github.com/rizzatti/dash.vim'
+Plug 'https://github.com/jiangmiao/auto-pairs'
+Plug 'https://github.com/gregsexton/MatchTag'
+" Plug 'https://github.com/vim-scripts/Rainbow-Parenthsis-Bundle'
 
 " UI Stuff
-Plug 'vim-airline/vim-airline'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'junegunn/goyo.vim'
-Plug 'mhinz/vim-startify'
+Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'https://github.com/nathanaelkane/vim-indent-guides'
+Plug 'https://github.com/junegunn/goyo.vim'
+Plug 'https://github.com/mhinz/vim-startify'
 
 " Debug Stuff
-Plug 'joonty/vdebug'
+Plug 'https://github.com/joonty/vdebug'
 
 " Snippets/Completions
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'valloric/youcompleteme'
+Plug 'https://github.com/SirVer/ultisnips' | Plug 'https://github.com/honza/vim-snippets'
+Plug 'https://github.com/valloric/youcompleteme'
 
 " Text stuff
-Plug 'kana/vim-textobj-user' " creates new text objects
-Plug 'kana/vim-textobj-indent'
-Plug 'kana/vim-textobj-entire'
-Plug 'reedes/vim-textobj-quote' " support curly quotes & more
+Plug 'https://github.com/kana/vim-textobj-user' " creates new text objects
+Plug 'https://github.com/kana/vim-textobj-indent'
+Plug 'https://github.com/kana/vim-textobj-entire'
+Plug 'https://github.com/reedes/vim-textobj-quote' " support curly quotes & more
 
 " Utilities
-Plug 'tpope/vim-speeddating'
+Plug 'https://github.com/tpope/vim-speeddating'
 
 " External apps
-Plug 'itspriddle/vim-marked' " for Marked2 on OS x
+Plug 'https://github.com/itspriddle/vim-marked' " for Marked2 on OS x
 
 " Languages
-Plug 'vim-scripts/nginx.vim'
-Plug 'mattn/emmet-vim', { 'for': 'html' }
-Plug 'othree/html5.vim', { 'for': 'html' }
-Plug 'elzr/vim-json', { 'for': 'json' }
-Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
-Plug 'ap/vim-css-color', { 'for': 'css' }
-Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
-Plug 'tpope/vim-markdown', { 'for': 'markdown' }
+Plug 'https://github.com/vim-scripts/nginx.vim'
+Plug 'https://github.com/mattn/emmet-vim', { 'for': 'html' }
+Plug 'https://github.com/othree/html5.vim', { 'for': 'html' }
+Plug 'https://github.com/elzr/vim-json', { 'for': 'json' }
+Plug 'https://github.com/cakebaker/scss-syntax.vim', { 'for': 'scss' }
+Plug 'https://github.com/ap/vim-css-color', { 'for': 'css' }
+Plug 'https://github.com/hail2u/vim-css3-syntax', { 'for': 'css' }
+Plug 'https://github.com/tpope/vim-markdown', { 'for': 'markdown' }
 
 " Drupal
-Plug 'git://drupalcode.org/project/vimrc.git', {'branch': '7.x-1.x', 'dir': '~/.vim/plugins/vim-drupal', 'rtp': 'bundle/vim-plugin-for-drupal/'}
+Plug 'https://github.com/git://drupalcode.org/project/vimrc.git', {'branch': '7.x-1.x', 'dir': '~/.vim/plugins/vim-drupal', 'rtp': 'bundle/vim-plugin-for-drupal/'}
 
 call plug#end()
 filetype plugin indent on
