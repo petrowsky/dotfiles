@@ -66,7 +66,7 @@ nnoremap <leader>src :source $MYVIMRC<cr>
 set clipboard=unnamed
 
 
-" GENERALSTUFF
+" GENERALSTUFF {{{
 "------------------------------------------------------------------------------
 
 set backspace=2   " Backspace deletes like most programs in insert mode
@@ -91,9 +91,9 @@ set sessionoptions-=options
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim
 endif
+" }}}
 
-
-" INSERTMODE
+" INSERTMODE {{{
 "------------------------------------------------------------------------------
 "
 " Esc key is too far. Let's make it easy.
@@ -115,15 +115,16 @@ set nojoinspaces
 " Familiar moving while typing.
 inoremap <C-h> <left>
 inoremap <C-l> <right>
+" }}}
 
-
-" VISUALMODE
+" VISUALMODE {{{
 "------------------------------------------------------------------------------
 vnoremap <C-j> <esc>
 vnoremap < <gv
 vnoremap > >gv
+"}}}
 
-" DISPLAYSTUFF
+" DISPLAYSTUFF {{{
 "------------------------------------------------------------------------------
 if &term == 'xterm' || &term == 'screen'
     set t_Co=256
@@ -187,8 +188,9 @@ if has('gui_running')
     set guioptions-=T           " Remove the toolbar
     call s:default_guifont()
 endif
+" }}}
 
-" TABSTUFF
+" TABSTUFF {{{
 "------------------------------------------------------------------------------
 set autoindent     " because code should be indented
 set expandtab      " insert spaces instead of <Tab>
@@ -209,8 +211,9 @@ nnoremap tn  :tabnew<CR>
 nnoremap tm  :tabm<Space>
 nnoremap tx  :tabclose<CR>
 
+" }}}
 
-" WINDOWSTUFF (navigation)
+" WINDOWSTUFF (navigation) {{{
 "------------------------------------------------------------------------------
 
 " Open new split panes to right and bottom, which feels more natural
@@ -243,8 +246,9 @@ nnoremap <S-l> :bnext<cr>
 nnoremap <silent> <leader>[ :exe "vertical resize -10"<cr>
 nnoremap <silent> <leader>] :exe "vertical resize +10"<cr>
 
+" }}}
 
-" SPELLINGSTUFF
+" SPELLINGSTUFF {{{
 "------------------------------------------------------------------------------
 
 " Spelling file can be symlinked
@@ -252,9 +256,9 @@ set spellfile=$HOME/.vim-spell-en.utf-8.add
 
 " Autocomplete with dictionary words when spell check is on
 set complete+=kspell
+" }}}
 
-
-" SEARCHINGSTUFF
+" SEARCHINGSTUFF {{{
 "------------------------------------------------------------------------------
 
 set ignorecase  " case insensitive searching
@@ -284,9 +288,9 @@ nnoremap :s/ :s/\v
 nnoremap <leader>fw :execute "vimgrep ".expand("<cword>")." %"<cr>:copen<cr>
 " find last search in quickfix
 nnoremap <leader>ff :execute 'vimgrep /'.@/.'/g %'<cr>:copen<cr>
+" }}}
 
-
-"FILESTUFF
+"FILESTUFF {{{
 "------------------------------------------------------------------------------
 
 filetype indent plugin on
@@ -319,8 +323,9 @@ noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Trim trailing whitespace just before save
 autocmd BufWritePre * call StripTrailingWhitespace()
+" }}}
 
-" DEVSTUFF
+" DEVSTUFF {{{
 "------------------------------------------------------------------------------
 
 " Like a faster update time for plugins like GitGutter
@@ -356,9 +361,9 @@ noremap <leader><C-r> :silent
 if executable("/usr/local/bin/par")
     set formatprg=par\ -w40
 endif
+" }}}
 
-
-" PLUGINSTUFF
+" PLUGINSTUFF {{{
 "------------------------------------------------------------------------------
 
 " ---< CtrlP >---
@@ -529,8 +534,9 @@ endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
+" }}}
 
-" MISCMAPPINGS
+" MISCMAPPINGS {{{
 "------------------------------------------------------------------------------
 
 " Straighten quotes
@@ -559,6 +565,7 @@ cmap w!! w !sudo tee % >/dev/null
 " Sorting css/scss
 autocmd FileType css,scss nnoremap <silent> <leader>S vi{:sort<CR>
 
+" }}}
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
