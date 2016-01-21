@@ -132,14 +132,23 @@ endif
 let base16colorspace=256
 set background=dark
 colorscheme base16-bright
+
 " Overrides to colorscheme based on preferences
-hi Normal guibg=#16191E
-hi LineNr guibg=#20232A
+function! s:patch_color_scheme()
+    " hi Normal guibg=#16191E
+    hi LineNr guibg=#20232A
+    hi ColorColumn ctermbg=234 guibg=#20232A
+    hi NonText guifg=#3C4459
+    " Matching search hits to my airline theme.
+    hi Search term=reverse ctermfg=8 ctermbg=3 guifg=#242424 guibg=#92bd48
+endfunction
+
+" autocmd! ColorScheme base16-bright call s:patch_color_scheme()
+call s:patch_color_scheme()
 
 " Display of width and line numbering
 set textwidth=80
 set colorcolumn=+1
-hi ColorColumn ctermbg=234 guibg=#20232A
 set nowrap
 set nolist
 set linespace=3
@@ -153,7 +162,6 @@ set shortmess=fxoO
 
 " Display whitespace stuff
 set list listchars=tab:»·,trail:·,nbsp:·,eol:¬
-hi NonText guifg=#3C4459
 
 " If Airline is installed then this will be overwritten by plugin settings
 if has('statusline')
@@ -169,10 +177,15 @@ endif
 " Always use vertical diffs
 set diffopt+=vertical
 
+" Font function (used by Goyo and gui)
+function! s:default_guifont()
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16,Menlo\ Regular:h14,Consolas\ Regular:h14,Courier\ New\ Regular:h14
+endfunction
+
 " GUI settings
 if has('gui_running')
     set guioptions-=T           " Remove the toolbar
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16,Menlo\ Regular:h14,Consolas\ Regular:h14,Courier\ New\ Regular:h14
+    call s:default_guifont()
 endif
 
 " TABSTUFF
@@ -252,9 +265,6 @@ set lazyredraw  " don't redraw while executing macros
 set magic       " Set magic on, for regex
 set showmatch   " show matching braces
 set matchtime=2 " how many tenths of a second to blink
-
-" Matching search hits to my airline theme.
-hi Search term=reverse ctermfg=8 ctermbg=3 guifg=#242424 guibg=#92bd48
 
 " Search within file to quickfix
 map <leader>s :vimgrep // <C-r>%<C-b><right><right><right><right><right><right><right><right><right>
@@ -509,11 +519,12 @@ function! s:goyo_leave()
     set nofullscreen
     set background=dark
     set linespace=3
+    call s:default_guifont()
   elseif exists('$TMUX')
     silent !tmux set status on
   endif
-  source $MYVIMRC
-  redraw!
+  " source $MYVIMRC
+  " redraw!
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
