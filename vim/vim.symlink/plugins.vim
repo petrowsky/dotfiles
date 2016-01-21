@@ -84,7 +84,7 @@ Plug 'https://github.com/hail2u/vim-css3-syntax', { 'for': 'css' }
 Plug 'https://github.com/tpope/vim-markdown', { 'for': 'markdown' }
 
 " Drupal
-Plug 'https://github.com/git://drupalcode.org/project/vimrc.git', {'branch': '7.x-1.x', 'dir': '~/.vim/plugins/vim-drupal', 'rtp': 'bundle/vim-plugin-for-drupal/'}
+Plug 'git://drupalcode.org/project/vimrc.git', {'branch': '7.x-1.x', 'dir': '~/.vim/plugins/vim-drupal', 'rtp': 'bundle/vim-plugin-for-drupal/'}
 
 call plug#end()
 filetype plugin indent on
