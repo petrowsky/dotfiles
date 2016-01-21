@@ -46,6 +46,7 @@ Plug 'https://github.com/rizzatti/dash.vim'
 Plug 'https://github.com/jiangmiao/auto-pairs'
 Plug 'https://github.com/gregsexton/MatchTag'
 " Plug 'https://github.com/vim-scripts/Rainbow-Parenthsis-Bundle'
+Plug 'https://github.com/laurentgoudet/vim-howdoi'
 
 " UI Stuff
 Plug 'https://github.com/vim-airline/vim-airline'
