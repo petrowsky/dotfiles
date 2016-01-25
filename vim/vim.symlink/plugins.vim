@@ -59,7 +59,7 @@ Plug 'https://github.com/joonty/vdebug'
 
 " Snippets/Completions
 Plug 'https://github.com/SirVer/ultisnips' | Plug 'https://github.com/honza/vim-snippets'
-Plug 'https://github.com/valloric/youcompleteme'
+Plug 'https://github.com/valloric/youcompleteme', { 'do': function('BuildYCM') }
 
 " Text stuff
 Plug 'https://github.com/kana/vim-textobj-user' " creates new text objects
