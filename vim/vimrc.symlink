@@ -7,8 +7,8 @@
 "   https://raw.githubusercontent.com/thoughtbot/dotfiles/master/vimrc
 "
 " NickNisi
-" https://github.com/nicknisi/dotfiles/blob/master/vim/vimrc.symlink
-"   https://raw.githubusercontent.com/nicknisi/dotfiles/master/vim/vimrc.symlink
+" https://github.com/nicknisi/dotfiles/blob/master/config/nvim/init.vim
+"   https://raw.githubusercontent.com/nicknisi/dotfiles/master/config/nvim/init.vim
 "
 " YADR
 " https://github.com/skwp/dotfiles
