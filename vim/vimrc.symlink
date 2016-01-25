@@ -30,7 +30,7 @@
 " Derek Wyatt
 " https://github.com/derekwyatt/vim-config/blob/master/vimrc
 "
-}}}
+" }}}
 
 " Customization before loading
 if filereadable(expand("~/.vimrc.before"))
@@ -366,6 +366,7 @@ autocmd BufWritePre * call StripTrailingWhitespace()
 
 " Like a faster update time for plugins like GitGutter
 set updatetime=400
+let g:ycm_allow_changing_updatetime = 0
 
 " Vdebug
 let g:vdebug_options={"port" : 9001}
