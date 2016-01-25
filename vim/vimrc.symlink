@@ -24,6 +24,9 @@
 " Jan Christoph Ebersbach
 " https://github.com/jceb/vimrc/tree/master/config
 "
+" Derek Wyatt
+" https://github.com/derekwyatt/vim-config/blob/master/vimrc
+"
 }}}
 
 " Customization before loading
