@@ -569,6 +569,26 @@ autocmd FileType css,scss nnoremap <silent> <leader>S vi{:sort<CR>
 
 " }}}
 
+" Experimental stuff
+" Open iTerm to the current working directory
+noremap <leader>it :silent
+            \ !osascript -e 'tell application "iTerm"
+            \     activate
+            \     try
+            \         set _session to current session of current terminal
+            \     on error
+            \         set _term to (make new terminal)
+            \         tell _term
+            \             launch session "Default"
+            \             set _session to current session
+            \         end tell
+            \     end try
+            \     tell _session
+            \         write text "cd " & "/Users/matt/.dotfiles/" & ";clear;"
+            \     end tell
+            \     activate
+            \ end tell'
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
