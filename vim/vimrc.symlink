@@ -577,6 +577,9 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " [i]nsert a snippet using howdoi
 let g:howdoi_map = '<c-i>'
 
+" ---< Gundo >---
+nnoremap <leader>u :GundoToggle<CR>
+
 " }}}
 
 " MISCMAPPINGS {{{

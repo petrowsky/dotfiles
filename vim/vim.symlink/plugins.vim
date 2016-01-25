@@ -71,6 +71,7 @@ Plug 'https://github.com/reedes/vim-textobj-quote' " support curly quotes & more
 " Utilities
 Plug 'https://github.com/tpope/vim-speeddating'
 Plug 'https://github.com/vim-scripts/VisIncr'
+Plug 'https://github.com/sjl/gundo.vim'
 
 " External apps
 Plug 'https://github.com/itspriddle/vim-marked' " for Marked2 on OS x
