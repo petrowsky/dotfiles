@@ -1,5 +1,8 @@
 " Inspiration (use gx when on the url to open) {{{
 "
+" What's hot on Github
+" https://github.com/trending?l=vim
+"
 " Load the raw.* files into a buffer using gf.
 "
 " ThoughtBot
