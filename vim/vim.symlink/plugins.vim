@@ -46,7 +46,8 @@ Plug 'https://github.com/rizzatti/dash.vim'
 Plug 'https://github.com/jiangmiao/auto-pairs'
 Plug 'https://github.com/gregsexton/MatchTag'
 " Plug 'https://github.com/vim-scripts/Rainbow-Parenthsis-Bundle'
-Plug 'https://github.com/laurentgoudet/vim-howdoi'
+" Plug 'https://github.com/laurentgoudet/vim-howdoi'
+" Plug 'https://github.com/isovector/vim-howdoi'
 
 " UI Stuff
 Plug 'https://github.com/vim-airline/vim-airline'
@@ -73,6 +74,8 @@ Plug 'https://github.com/vim-scripts/VisIncr'
 
 " External apps
 Plug 'https://github.com/itspriddle/vim-marked' " for Marked2 on OS x
+" Plug 'https://github.com/laurentgoudet/vim-howdoi'
+Plug 'https://github.com/isovector/vim-howdoi'
 
 " Languages
 Plug 'https://github.com/vim-scripts/nginx.vim'
