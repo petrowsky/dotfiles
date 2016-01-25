@@ -593,7 +593,7 @@ nnoremap <leader>" :%s/\(“\\|”\)/"/g<CR>
 nnoremap <leader>' :%s/\(‘\\|’\)/'/g<CR>
 
 " Wrap all lines in file within quotes
-nnoremap "w :%s/.*/"&"<CR>:noh<CR>
+nnoremap <leader>w :%s/.*/"&"<CR>:noh<CR>
 
 " Open markdown docs within Marked2.app
 noremap <leader>p :MarkedOpen<CR>
