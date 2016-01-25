@@ -580,6 +580,9 @@ let g:howdoi_map = '<c-i>'
 " ---< Gundo >---
 nnoremap <leader>u :GundoToggle<CR>
 
+" ---< Rainbow Parentheses >---
+nnoremap <leader>( :RainbowParenthesesToggle<CR>
+
 " }}}
 
 " MISCMAPPINGS {{{

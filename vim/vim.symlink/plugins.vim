@@ -45,7 +45,7 @@ Plug 'https://github.com/majutsushi/tagbar'
 Plug 'https://github.com/rizzatti/dash.vim'
 Plug 'https://github.com/jiangmiao/auto-pairs'
 Plug 'https://github.com/gregsexton/MatchTag'
-" Plug 'https://github.com/vim-scripts/Rainbow-Parenthsis-Bundle'
+Plug 'https://github.com/kien/rainbow_parentheses.vim'
 " Plug 'https://github.com/laurentgoudet/vim-howdoi'
 " Plug 'https://github.com/isovector/vim-howdoi'
 
