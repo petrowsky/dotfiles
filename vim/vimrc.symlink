@@ -60,12 +60,13 @@ endfunction
 " MISCMAPPINGS
 
 
+set nocompatible      " Because vim is better.
+
 " Load plugins
 if filereadable(expand("~/.vim/plugins.vim"))
     source ~/.vim/plugins.vim
 endif
 
-set nocompatible      " Because vim is better.
 set hidden            " Don't kill my buffers.
 
 " Leader key
