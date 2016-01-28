@@ -365,7 +365,7 @@ autocmd BufWritePre * call StripTrailingWhitespace()
 "------------------------------------------------------------------------------
 
 " Like a faster update time for plugins like GitGutter
-set updatetime=400
+set updatetime=800
 let g:ycm_allow_changing_updatetime = 0
 
 " Vdebug
@@ -544,6 +544,7 @@ function! s:goyo_enter()
     setlocal wrap
     setlocal wrapmargin=0
     setlocal textwidth=0
+    setlocal spell
   if has('gui_running')
     set fullscreen
     set background=light
@@ -558,6 +559,7 @@ function! s:goyo_leave()
     setlocal nolinebreak
     setlocal nowrap
     setlocal textwidth=80
+    setlocal nospell
   if has('gui_running')
     set nofullscreen
     set background=dark
