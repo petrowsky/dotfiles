@@ -214,14 +214,14 @@ endif
 set diffopt+=vertical
 
 " Font function (used by Goyo and gui)
-function! s:default_guifont()
+function! MyGuiFont()
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16,Menlo\ Regular:h14,Consolas\ Regular:h14,Courier\ New\ Regular:h14
 endfunction
 
 " GUI settings
 if has('gui_running')
     set guioptions-=T           " Remove the toolbar
-    call s:default_guifont()
+    call MyGuiFont()
 endif
 " }}}
 
@@ -564,7 +564,7 @@ function! s:goyo_leave()
     set nofullscreen
     set background=dark
     set linespace=3
-    call s:default_guifont()
+    call MyGuiFont()
   elseif exists('$TMUX')
     silent !tmux set status on
   endif
@@ -615,6 +615,9 @@ cmap w!! w !sudo tee % >/dev/null
 
 " Sorting css/scss
 autocmd FileType css,scss nnoremap <silent> <leader>S vi{:sort<CR>
+
+nmap <leader><f1> :call MyGuiFont()<cr>
+nmap <leader><f2> :set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h44<cr>
 
 " }}}
 
