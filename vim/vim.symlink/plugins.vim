@@ -23,6 +23,7 @@ Plug 'https://github.com/terryma/vim-multiple-cursors'
 " Display stuff
 "Plug 'https://github.com/xsunsmile/showmarks'
 Plug 'https://github.com/chrisbra/Colorizer'
+Plug 'https://github.com/osyo-manga/vim-over'
 
 " Window stuff
 Plug 'https://github.com/qpkorr/vim-bufkill'
