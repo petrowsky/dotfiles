@@ -21,7 +21,7 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # echo "Set a blazingly fast keyboard repeat rate"
-defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain KeyRepeat -int 0
 
 # echo "Set a shorter Delay until key repeat"
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
@@ -58,6 +58,15 @@ defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# Faster mousing
+defaults write -g com.apple.mouse.scaling -float 6
+
+# Enable Fkeys
+defaults write -g com.apple.keyboard.fnState -bool true
+
+# Dark toolbar
+defaults write -g 'AppleInterfaceStyle' 'Dark'
 
 # -----------------------------------------------------------------------------
 # Misc                                                                        #
@@ -155,6 +164,14 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 defaults write com.apple.screencapture type -string "png"
 defaults write com.apple.screencapture disable-shadow -bool false
+
+
+# -----------------------------------------------------------------------------
+# Spaces                                                                      #
+# -----------------------------------------------------------------------------
+
+# Disable multiple menu bars on multiple screens
+defaults write com.apple.spaces  spans-displays -bool true
 
 # -----------------------------------------------------------------------------
 # Safari & WebKit                                                             #
