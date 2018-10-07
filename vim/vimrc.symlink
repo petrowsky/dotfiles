@@ -244,6 +244,9 @@ set shiftround     " round indent to a multiple of 'shiftwidth'
 set completeopt+=longest,menuone
 set showtabline=2  " always show the tabline
 
+" When we want a real tab we can use Shift-Tab. (Use '.' repeat for multiple)
+inoremap <S-Tab> <C-V><Tab>
+
 " Tab navigation/manipulation. Just like h,j,k,l - but with 't'
 nnoremap th  :tabfirst<CR>
 nnoremap tj  :tabprev<CR>
@@ -305,7 +308,7 @@ set complete+=kspell
 "------------------------------------------------------------------------------
 
 set ignorecase  " case insensitive searching
-set smartcase   " case-sensitive if expresson contains a capital letter
+set smartcase   " case-sensitive if expression contains a capital letter
 set hlsearch    " highlight search matches
 set incsearch   " set incremental search, like modern browsers
 set lazyredraw  " don't redraw while executing macros
