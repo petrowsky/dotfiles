@@ -54,14 +54,26 @@ Plug 'https://github.com/kien/rainbow_parentheses.vim'
 Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/nathanaelkane/vim-indent-guides'
 Plug 'https://github.com/junegunn/goyo.vim'
-Plug 'https://github.com/mhinz/vim-startify'
+" Plug 'https://github.com/mhinz/vim-startify'
 
 " Debug Stuff
-Plug 'https://github.com/joonty/vdebug'
+if has ('python3')
+    Plug 'https://github.com/joonty/vdebug'
+endif
 
 " Snippets/Completions
-Plug 'https://github.com/SirVer/ultisnips' | Plug 'https://github.com/honza/vim-snippets'
-Plug 'https://github.com/valloric/youcompleteme', { 'do': function('BuildYCM') }
+if has ('gui')
+" Plug 'https://github.com/SirVer/ultisnips' | Plug 'https://github.com/honza/vim-snippets'
+" Plug 'https://github.com/valloric/youcompleteme', { 'do': function('BuildYCM') }
+    if has('nvim')
+        Plug 'https://github.com/Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    else
+        Plug 'https://github.com/Shougo/deoplete.nvim'
+        Plug 'https://github.com/roxma/nvim-yarp'
+        Plug 'https://github.com/roxma/vim-hug-neovim-rpc'
+    endif
+    let g:deoplete#enable_at_startup = 1
+endif
 
 " Text stuff
 Plug 'https://github.com/kana/vim-textobj-user' " creates new text objects
@@ -89,6 +101,10 @@ Plug 'https://github.com/cakebaker/scss-syntax.vim', { 'for': 'scss' }
 Plug 'https://github.com/ap/vim-css-color', { 'for': 'css' }
 Plug 'https://github.com/hail2u/vim-css3-syntax', { 'for': 'css' }
 Plug 'https://github.com/tpope/vim-markdown', { 'for': 'markdown' }
+
+" JS/ES6
+Plug 'https://github.com/w0rp/ale', { 'for': 'js'}
+Plug 'https://github.com/pangloss/vim-javascript.git'
 
 " Drupal
 Plug 'git://drupalcode.org/project/vimrc.git', {'branch': '7.x-1.x', 'dir': '~/.vim/plugins/vim-drupal', 'rtp': 'bundle/vim-plugin-for-drupal/'}
