@@ -1,6 +1,5 @@
 " Inspiration (use gx when on the url to open) {{{
 "
-"
 " What's hot on Github
 " https://github.com/trending?l=vim
 "
@@ -99,7 +98,7 @@ let mapleader = " "
 nnoremap <leader>conf :e! ~/.dotfiles/vim/vimrc.symlink<cr>
 nnoremap <leader>src :source $MYVIMRC<cr>
 
-" because changing plugins happens sometimes.
+" Because changing plugins happens sometimes.
 nnoremap <leader>plug :e! ~/.vim/plugins.vim<cr>
 
 " Using the OS clipboard is nice
@@ -179,7 +178,10 @@ function! s:patch_color_scheme()
     " hi Normal guibg=#16191E
     hi LineNr guibg=#20232A
     hi ColorColumn ctermbg=234 guibg=#20232A
+    " Coloring for eol, extends and precedes
     hi NonText guifg=#3C4459
+    " Coloring for nbsp, space, tab and trail
+    hi SpecialKey guifg=#3C4459
     " Matching search hits to my airline theme.
     hi Search term=reverse ctermfg=8 ctermbg=3 guifg=#242424 guibg=#92bd48
 endfunction
