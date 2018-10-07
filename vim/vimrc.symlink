@@ -1,5 +1,6 @@
 " Inspiration (use gx when on the url to open) {{{
 "
+"
 " What's hot on Github
 " https://github.com/trending?l=vim
 "
@@ -25,7 +26,7 @@
 "   https://raw.githubusercontent.com/bling/dotvim/master/vimrc
 "
 " Jan Christoph Ebersbach
-" https://github.com/jceb/vimrc/tree/master/config
+" https://github.com/jceb/vimrc
 "
 " Derek Wyatt
 " https://github.com/derekwyatt/vim-config/blob/master/vimrc
@@ -82,6 +83,7 @@ endfunction
 
 
 set nocompatible      " Because vim is better.
+set path+=**          " Make :find work recursively
 
 " Load plugins
 if filereadable(expand("~/.vim/plugins.vim"))
@@ -96,6 +98,9 @@ let mapleader = " "
 " Because editing ~/.vimrc happens a lot.
 nnoremap <leader>conf :e! ~/.dotfiles/vim/vimrc.symlink<cr>
 nnoremap <leader>src :source $MYVIMRC<cr>
+
+" because changing plugins happens sometimes.
+nnoremap <leader>plug :e! ~/.vim/plugins.vim<cr>
 
 " Using the OS clipboard is nice
 set clipboard=unnamed
@@ -183,7 +188,7 @@ endfunction
 call s:patch_color_scheme()
 
 " Display of width and line numbering
-set textwidth=80
+set textwidth=0
 set colorcolumn=+1
 set nowrap
 set nolist
