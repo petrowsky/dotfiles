@@ -1,5 +1,6 @@
 " Inspiration (use gx when on the url to open) {{{
 "
+"
 " What's hot on Github
 " https://github.com/trending?l=vim
 "
@@ -171,6 +172,8 @@ endif
 
 let base16colorspace=256
 set background=dark
+" See color scheme options at this url.
+" http://chriskempson.com/projects/base16/
 colorscheme base16-bright
 
 " Overrides to colorscheme based on preferences
