@@ -1,3 +1,7 @@
+" Why use the full https://github.com when you could
+" just use Plug 'account/reponame'? Because you can use
+" gx to visit the url for reading the documentation.
+
 filetype off
 "
 " https://github.com/junegunn/vim-plug
@@ -12,7 +16,7 @@ Plug 'https://github.com/xolox/vim-session'
 
 " File navigation
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
-Plug 'https://github.com/scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin' | Plug 'https://github.com/ryanoasis/vim-devicons'
+Plug 'https://github.com/scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin'
 Plug 'https://github.com/tpope/vim-vinegar'
 Plug 'https://github.com/rking/ag.vim'
 Plug 'https://github.com/FelikZ/ctrlp-py-matcher' " improve CtrlP performance
@@ -52,6 +56,7 @@ Plug 'https://github.com/kien/rainbow_parentheses.vim'
 
 " UI Stuff
 Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'https://github.com/vim-airline/vim-airline-themes'
 Plug 'https://github.com/nathanaelkane/vim-indent-guides'
 Plug 'https://github.com/junegunn/goyo.vim'
 " Plug 'https://github.com/mhinz/vim-startify'
@@ -108,6 +113,9 @@ Plug 'https://github.com/pangloss/vim-javascript.git'
 
 " Drupal
 Plug 'git://drupalcode.org/project/vimrc.git', {'branch': '7.x-1.x', 'dir': '~/.vim/plugins/vim-drupal', 'rtp': 'bundle/vim-plugin-for-drupal/'}
+
+" Vim Devicons - this needs to load last
+Plug 'https://github.com/ryanoasis/vim-devicons'
 
 call plug#end()
 filetype plugin indent on
