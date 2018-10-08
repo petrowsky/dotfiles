@@ -225,7 +225,8 @@ set diffopt+=vertical
 
 " Font function (used by Goyo and gui)
 function! MyGuiFont()
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16,Menlo\ Regular:h14,Consolas\ Regular:h14,Courier\ New\ Regular:h14
+    "set guifont=DejaVuSansMono\ Nerd\ Font:h16,Menlo\ Regular:h14,Consolas\ Regular:h14,Courier\ New\ Regular:h14
+    set guifont=UbuntuMono\ Nerd\ Font:h18,Menlo\ Regular:h14,Consolas\ Regular:h14,Courier\ New\ Regular:h14
 endfunction
 
 " GUI settings
@@ -562,7 +563,7 @@ function! s:goyo_enter()
     set fullscreen
     set background=light
     set linespace=7
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h24,Menlo\ Regular:h24,Consolas\ Regular:h24,Courier\ New\ Regular:h24
+    set guifont=UbuntuMono\ Nerd\ Font:h24,Menlo\ Regular:h24,Consolas\ Regular:h24,Courier\ New\ Regular:h24
   elseif exists('$TMUX')
     silent !tmux set status off
   endif
@@ -603,6 +604,10 @@ nnoremap <leader>( :RainbowParenthesesToggle<CR>
 " MISCMAPPINGS {{{
 "------------------------------------------------------------------------------
 
+" Filter the last search into register 'a' then replace the current buffer
+" https://stackoverflow.com/questions/4503748/remove-everything-except-regex-match-in-vim
+nnoremap <leader># :let @a=""\|%s//\=setreg('A', submatch(0), 'l')/g\|%d _\|pu a\|0d _
+
 " Straighten quotes
 nnoremap <leader>" :%s/\(“\\|”\)/"/g<CR>
 nnoremap <leader>' :%s/\(‘\\|’\)/'/g<CR>
@@ -630,7 +635,7 @@ cmap w!! w !sudo tee % >/dev/null
 autocmd FileType css,scss nnoremap <silent> <leader>S vi{:sort<CR>
 
 nmap <leader><f1> :call MyGuiFont()<cr>
-nmap <leader><f2> :set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h44<cr>
+nmap <leader><f2> :set guifont=UbuntuMono\ Nerd\ Font:h44<cr>
 
 " }}}
 
